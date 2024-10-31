@@ -11,18 +11,6 @@ namespace E_Commerce.Email_Seneding
 {
     public class EmailSender(IConfiguration _configuration) : IEmailSender
     {
-        //public async Task SendEmailAsync(string subject , string toEmail , string username , string message)
-        //{
-        //    var apiKey = Environment.GetEnvironmentVariable("SENDGRID_API_KEY");
-        //    var client = new SendGridClient(apiKey);
-        //    var from = new EmailAddress("kmoamed942@gmail.com", "E-CommerceApp");
-        //    //var subject = "Sending with SendGrid is Fun";
-        //    var to = new EmailAddress(toEmail, username);
-        //    var plainTextContent = message;
-        //    var htmlContent = "";
-        //    var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
-        //    var response = await client.SendEmailAsync(msg);
-        //}
         public async Task SendEmailAsync(string subject, string toEmail, string message)
         {
             var email = new MimeMessage();
